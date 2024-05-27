@@ -36,13 +36,15 @@
 // console.log(2 * 5 === '10');
 
 
-const dd = {
-    'age': {
-        'a': {
-            'b': 1331,
-        }
-    },
-    'name': 123,
-};
+// const dd = {
+//     'age': {
+//         'a': {
+//             'b': 1331,
+//         }
+//     },
+//     'name': 123,
+// };
 
-console.log(dd['b']);
+// console.log(dd['b']);
+
+
