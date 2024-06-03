@@ -266,74 +266,164 @@
 
 
 
-let numberOfFilms;
+// let numberOfFilms;
 
-// function start() {
-//     numberOfFilms = +prompt("Сколкьо фильмов вы уже посмотрели?", "");
+// // function start() {
+// //     numberOfFilms = +prompt("Сколкьо фильмов вы уже посмотрели?", "");
 
-//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-//         numberOfFilms = +prompt("Сколкьо фильмов вы уже посмотрели?", "");
+// //     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+// //         numberOfFilms = +prompt("Сколкьо фильмов вы уже посмотрели?", "");
+// //     }
+// // }
+
+// // start();
+
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//        return console.log(personalMovieDB);
 //     }
 // }
 
-// start();
+// showMyDB();
 
+// function writeYourGenres() {
+//     for (let i = 1; i <=3; i++) {
+//         const genre = prompt(`Ваш любимый жанр по порядку ${i}`)
+//         personalMovieDB.genres[i - 1] = genre;
+//     }
+// }
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-
-function showMyDB(hidden) {
-    if (!hidden) {
-       return console.log(personalMovieDB);
-    }
-}
-
-showMyDB();
-
-function writeYourGenres() {
-    for (let i = 1; i <=3; i++) {
-        const genre = prompt(`Ваш любимый жанр по порядку ${i}`)
-        personalMovieDB.genres[i - 1] = genre;
-    }
-}
-
-writeYourGenres();
+// writeYourGenres();
 
 
 
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt("Один из последним просмотренных фильмов?", "");
-        const b = prompt("На сколько оцените его?", "");
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt("Один из последним просмотренных фильмов?", "").trimm();
+//         const b = prompt("На сколько оцените его?", "").trim();
     
-        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log('done!');
-        } else {
-            console.log('error');
-            i--;
-        }
-    }
-}
+//         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//             console.log('done!');
+//         } else {
+//             console.log('error');
+//             i--;
+//         }
+//     }
+// }
 
-rememberMyFilms();
+// rememberMyFilms();
 
-function detectedPersLevl() {
-    if (personalMovieDB.count < 10) {
-        console.log("Просмотрено довольно мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log("Вы классический зритель");
-    } else if (personalMovieDB.count > 30) {
-        console.log("Вы киноман!");
-    }
-}
+// function detectedPersLevl() {
+//     if (personalMovieDB.count < 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log("Вы классический зритель");
+//     } else if (personalMovieDB.count > 30) {
+//         console.log("Вы киноман!");
+//     }
+// }
 
-detectedPersLevl();
+// detectedPersLevl();
 
-// console.log(personalMovieDB);
+// // console.log(personalMovieDB);
+
+
+
+
+// function nan(){
+//     let a = +prompt("Введите число");
+//     if (a < 0) {
+//         console.log("Ваше число является отрицательным");
+//     } else if (a > 0) {
+//         console.log("Ваше число является положительным");
+//     }
+// }
+
+// nan();
+
+// let str = prompt('Введите ваше слово', '');
+
+// console.log(str.length);
+
+
+
+
+// function first() {
+//     //do something
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 5000);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
+
+// function done() {
+//     console.log('Я прошел этот урок');
+// }
+
+// learnJS('JavaScropt', done);
+
+// const optioons = {
+//     name: 'test',
+//     width: 1024,
+//     heigth: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function() {
+//         console.log("Test");
+//     }
+// };
+
+// optioons.makeTest();
+
+
+// const {border, bg} = optioons.colors;
+// console.log(border);
+
+// console.log(Object.keys(optioons));    // ЭТО ОЧЕНЬ ВАЖНО ДЛЯ БУУДЕЩЙ РАБОТЫ  
+// console.log(Object.keys(optioons).length);
+
+// console.log(optioons.name);
+
+// // delete optioons.name;
+
+// console.log(optioons);
+
+// let counter = 0;
+// for (let key in optioons) {
+//     if (typeof(optioons[key]) === 'object') {
+//         for (let i in optioons[key]) {
+//             console.log(`Свойство ${i} имеет значение ${optioons[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${optioons[key]}`);
+//         counter++;
+//     }
+
+// };
+
+// console.log(counter);
